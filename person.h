@@ -1,6 +1,8 @@
-#pragma once
-#include <iostream>
+#ifndef _PERSON_H_
+#define _PERSON_H_
 
+
+#include <iostream>
 class Person
 {
 private:
@@ -31,7 +33,7 @@ public:
 	// Destructor
 	~Person();
 
-	// Setting values
+	// Methods for setting values of variables
 	void set_age(int age_);
 	void set_weight(float weight_);
 	void set_height(float height_);
@@ -39,7 +41,7 @@ public:
 	void set_grade(int grade_);
 	void set_fav_num(int fav_num_);
 
-	// Getting values
+	// Methods for getting values of variables
 	int get_age();
 	float get_weight();
 	float get_height();
@@ -47,10 +49,15 @@ public:
 	int get_grade();
 	int get_fav_num();
 
+	// Method for collecting student's data
+	void collect_data();
+
 	// Method for printing all student's data
 	void print_data();
 
 	// Method for calculating student's BMI
-	void calculateBMI(float weight_, float height_);
+	void calculateBMI();
 
 };
+
+#endif _PERSON_H_
